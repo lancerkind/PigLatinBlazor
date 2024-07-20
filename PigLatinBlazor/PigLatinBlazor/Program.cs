@@ -1,7 +1,10 @@
 using PigLatinBlazor.Client.Pages;
 using PigLatinBlazor.Components;
+using PigLatinBlazor.TranslatorLogic;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<Translator>();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
